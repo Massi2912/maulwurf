@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Maulwurf-Mania</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <header class="hud">
+      <div class="score"><small>Punkte</small><b id="score">0</b></div>
+      <div class="right">
+        <div id="lives" class="lives" aria-label="Leben"></div>
+        <button id="mute" class="icon-btn" type="button" aria-label="Ton ausschalten" aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9v6h4l5 4V5L7 9H3z" fill="currentColor"/><path class="waves" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/><path class="slash" d="M16 9l6 6M22 9l-6 6"/></svg>
+        </button>
+      </div>
+      <div class="progress">
+        <span class="lvl">Level <b id="level">1</b></span>
+        <div class="bar"><i id="bar"></i></div>
+        <span id="combo" class="combo">x1</span>
+      </div>
+    </header>
+    <div id="board" class="board"></div>
+    <div id="toast" class="toast"></div>
+
+    <section id="menu" class="overlay">
+      <div class="card">
+        <div class="mascot hole up" aria-hidden="true">
+          <div class="spot"><div class="pit"><div class="back"></div><div class="mole"><span class="eye"></span><span class="eye"></span><span class="nose"></span><span class="teeth"></span></div><div class="lip"></div></div></div>
+        </div>
+        <h1 id="title">Maulwurf<br>Mania</h1>
+        <p id="sub" class="sub">Hau zu, bevor sie abhauen!</p>
+
+        <ul class="rules">
+          <li><span class="chip">🔨</span><span>Triff Maulwürfe. Treffer in Folge bauen eine <b>Combo</b> bis x5 auf.</span></li>
+          <li><span class="chip gold">⭐</span><span>Goldene Maulwürfe geben <b>5 Punkte</b>, sind aber schnell weg.</span></li>
+          <li><span class="chip">💣</span><span>Bomben lässt du in Ruhe, sonst verlierst du ein Leben.</span></li>
+          <li><span class="chip red">♥</span><span>Du hast <b>3 Leben</b>. Entwischt ein Maulwurf, ist eins weg.</span></li>
+        </ul>
+
+        <div class="results">
+          <div class="stat"><small>Punkte</small><b id="rScore">0</b></div>
+          <div class="stat"><small>Level</small><b id="rLevel">1</b></div>
+          <div class="stat"><small>Rekord</small><b id="rBest">0</b></div>
+        </div>
+        <p class="best-badge">Dein Rekord <b id="bestMenu">0</b></p>
+
+        <button id="start" type="button">Spielen</button>
+      </div>
+    </section>
+  </div>
+  <div id="hammer" aria-hidden="true">🔨</div>
+  <script src="script.js"></script>
+</body>
+</html>
